@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+FolderXmlParser/obj
+FolderXmlParser/bin
+.vs/FolderXmlParser/v16
