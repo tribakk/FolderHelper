@@ -48,5 +48,25 @@ namespace FolderXmlParser
                 parseFolder(path2);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string path = textBox3.Text;
+            List<string> files = TestExport.kernal.utils.GetSubFiles(path, false);
+            int count = files.Count;
+            int fileSize = 0;
+            for (int i = 0; i<count; i++)
+            {
+                string fileName = files[i];
+                string ext = Path.GetExtension(fileName);
+                if (ext == ".cpp" || ext ==".h")
+                {
+                    int size =  System.IO.File.ReadAllLines(fileName).Length;
+                    fileSize += size;
+                }
+
+            }
+            Text = fileSize.ToString();
+        }
     }
 }
